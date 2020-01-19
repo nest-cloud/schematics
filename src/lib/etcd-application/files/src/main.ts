@@ -7,7 +7,7 @@ import { resolve } from 'path';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     logger: new NestLogger({
-      filePath: resolve(__dirname, 'config.yaml'),
+      filePath: resolve(__dirname, '../config.yaml'),
     }),
   });
   process.on('SIGINT', async () => {

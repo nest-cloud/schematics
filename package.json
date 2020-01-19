@@ -1,6 +1,6 @@
 {
   "name": "@nestcloud/schematics",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "NestCloud - A NodeJS micro-service solution, writing by Typescript language and NestJS framework.",
   "main": "dist/index.js",
   "files": [
