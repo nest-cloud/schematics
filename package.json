@@ -1,0 +1,82 @@
+{
+  "name": "@nestcloud/schematics",
+  "version": "0.0.1",
+  "description": "NestCloud - A NodeJS micro-service solution, writing by Typescript language and NestJS framework.",
+  "main": "dist/index.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "postbuild": "npm run copy:collection && npm run copy:lib",
+    "build": "rm -rf dist && tsc --project tsconfig.lib.json",
+    "clean": "gulp clean:src",
+    "copy:collection": "cpx src/collection.json dist && cpx 'src/lib/**/schema.json' dist/lib",
+    "copy:lib": "cpx 'src/lib/**/{files,workspace}/**/*.*' dist/lib",
+    "lint": "tslint --project tsconfig.json",
+    "prepublish:next": "npm run build",
+    "publish:next": "npm publish --access public --tag next",
+    "prepublish:npm": "npm run build",
+    "publish:npm": "npm publish --access public",
+    "test": "npm run clean && NODE_ENV=test jest -w 1 --no-cache --config jest.json",
+    "test:dev": "NODE_ENV=test npm run -s test -- --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nest-cloud/schematics.git"
+  },
+  "contributors": [
+    "Miaowing"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nest-cloud/schematics/issues"
+  },
+  "homepage": "https://github.com/nest-cloud/schematics#readme",
+  "dependencies": {
+    "@angular-devkit/core": "7.3.8",
+    "@angular-devkit/schematics": "7.3.8",
+    "fs-extra": "8.1.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "8.0.1",
+    "@types/jest": "24.9.0",
+    "@types/node": "12.12.21",
+    "cpx": "1.5.0",
+    "gulp": "4.0.2",
+    "gulp-clean": "0.4.0",
+    "jest": "24.9.0",
+    "nyc": "15.0.0",
+    "ts-jest": "24.3.0",
+    "ts-node": "8.6.2",
+    "tslint": "5.20.1",
+    "typescript": "3.7.5"
+  },
+  "peerDependencies": {
+    "typescript": "^3.4.5"
+  },
+  "schematics": "./dist/collection.json",
+  "nyc": {
+    "include": [
+      "src"
+    ],
+    "exclude": [
+      "node_modules",
+      "test"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  }
+}

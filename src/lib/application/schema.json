@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "SchematicsNestCloudApplication",
+  "title": "NestCloud Application Options Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the application.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use for the new project?"
+    },
+    "author": {
+      "type": "string",
+      "description": "NestCloud application author.",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "description": "NestCloud application description.",
+      "default": ""
+    },
+    "directory": {
+      "type": "string",
+      "description": "NestCloud application destination directory"
+    },
+    "version": {
+      "type": "string",
+      "description": "NestCloud application version.",
+      "default": "0.0.1"
+    },
+    "language": {
+      "type": "string",
+      "description": "NestCloud application language."
+    },
+    "packageManager": {
+      "type": "string",
+      "description": "NestCloud application package manager."
+    },
+    "dependencies": {
+      "type": "string",
+      "description": "NestCloud application dependencies."
+    },
+    "devDependencies": {
+      "type": "string",
+      "description": "NestCloud application development dependencies."
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

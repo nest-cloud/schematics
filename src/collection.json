@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "application": {
+      "factory": "./lib/application/application.factory#main",
+      "description": "Create a NestCloud application.",
+      "schema": "./lib/application/schema.json"
+    },
+    "consul-application": {
+      "factory": "./lib/application/application.factory#main",
+      "description": "Create a NestCloud application.",
+      "schema": "./lib/application/schema.json"
+    }
+  }
+}
