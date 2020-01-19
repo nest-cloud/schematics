@@ -7,9 +7,14 @@
       "schema": "./lib/application/schema.json"
     },
     "consul-application": {
-      "factory": "./lib/application/application.factory#main",
+      "factory": "./lib/consul-application/application.factory#main",
       "description": "Create a NestCloud application.",
-      "schema": "./lib/application/schema.json"
+      "schema": "./lib/consul-application/schema.json"
+    },
+    "etcd-application": {
+      "factory": "./lib/etcd-application/application.factory#main",
+      "description": "Create a NestCloud application.",
+      "schema": "./lib/etcd-application/schema.json"
     }
   }
 }

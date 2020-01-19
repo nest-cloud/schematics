@@ -7,7 +7,7 @@
 # NestCloud
 
 <p align="center">
-    NestCloud is a <a href="http://nodejs.org" target="blank">Node.js</a> micro-service solution, writing by Typescript language and <a href="http://nestjs.com/" target="blank">Nest.js</a> framework.</p>
+    NestCloud is a <a href="http://nodejs.org" target="blank">Node.js</a> micro-service solution, writing by <a href="https://www.typescriptlang.org" target="blank">Typescript</a> language and <a href="http://nestjs.com/" target="blank">Nest.js</a> framework.</p>
 <p align="center">
 
 <p align="center">

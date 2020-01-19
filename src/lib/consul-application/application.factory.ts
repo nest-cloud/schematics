@@ -1,7 +1,7 @@
-import { join, Path, strings } from '@angular-devkit/core';
+import { Path, strings } from '@angular-devkit/core';
 import { apply, mergeWith, move, Rule, Source, template, url } from '@angular-devkit/schematics';
 import { basename, parse } from 'path';
-import { DEFAULT_AUTHOR, DEFAULT_DESCRIPTION, DEFAULT_LANGUAGE, DEFAULT_VERSION } from '../defaults';
+import { DEFAULT_AUTHOR, DEFAULT_DESCRIPTION, DEFAULT_VERSION } from '../defaults';
 import { ApplicationOptions } from './application.schema';
 
 export function main(options: ApplicationOptions): Rule {

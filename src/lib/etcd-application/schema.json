@@ -32,6 +32,10 @@
       "description": "NestCloud application version.",
       "default": "0.0.1"
     },
+    "language": {
+      "type": "string",
+      "description": "NestCloud application language."
+    },
     "packageManager": {
       "type": "string",
       "description": "NestCloud application package manager."
