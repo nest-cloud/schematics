@@ -17,7 +17,7 @@ import { resolve } from 'path';
   imports: [
     LoggerModule.forRoot(),
     BootModule.forRoot({
-      filePath: resolve(__dirname, 'config.yaml'),
+      filePath: resolve(__dirname, '../config.yaml'),
     }),
     ConsulModule.forRootAsync({ inject: [BOOT] }),
     ConfigModule.forRootAsync({ inject: [BOOT, CONSUL] }),
@@ -25,7 +25,9 @@ import { resolve } from 'path';
     LoadbalanceModule.forRootAsync({ inject: [BOOT] }),
     HttpModule.forRootAsync({ inject: [LOADBALANCE] }),
     TerminusModule.forRootAsync({
-      useFactory: () => ({ endpoints: [{ url: '/health' }] }),
+      useFactory: () => ({
+        endpoints: [{ url: '/health', healthIndicators: [] }],
+      }),
     }),
   ],
   controllers: [AppController],
