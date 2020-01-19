@@ -1,0 +1,20 @@
+consul:
+  host: localhost
+  port: 8500
+service:
+  name: nestcloud-starter-service
+  port: 3000
+  healthCheck:
+    interval: 10s
+    timeout: 1s
+config:
+  name: ${{ service.name }}-config
+loadbalance:
+  rule: RandomRule
+logger:
+  level: info
+  transports:
+    - transport: console
+      colorize: true
+      datePattern: YYYY-MM-DD hh:mm:ss
+      label: ${{ service.name }}
