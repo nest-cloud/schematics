@@ -24,7 +24,7 @@
     "@nestcloud/boot": "^0.7.1",
     "@nestcloud/common": "^0.7.1",
     "@nestcloud/config": "^0.7.1",
-    "@nestcloud/consul": "^0.7.1",
+    "@nestcloud/etcd": "^0.7.1",
     "@nestcloud/http": "^0.7.1",
     "@nestcloud/loadbalance": "^0.7.1",
     "@nestcloud/logger": "^0.7.1",
